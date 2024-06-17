@@ -22,11 +22,11 @@ function retreive(arr) {
         str += `
         <div class="col-lg-3 col-md-6 d-flex justify-content-center align-items-center text-center">
             <div class="card shadowA1" style="width: 18rem;">
-                <img src="${allData[i].image_url}" class="card-img-top" alt="...">
+                <img src="${arr[i].image_url}" class="card-img-top" alt="...">
                 <div class="card-body d-flex justify-content-center flex-column">
-                    <h5 class="card-title">${allData[i].title}</h5>
-                    <p class="card-text">${allData[i].recipe_id}</p>
-                    <a btn='${allData[i].recipe_id}' href="#" class="btn btn-outline-success fw-bold">More</a>
+                    <h5 class="card-title">${arr[i].title}</h5>
+                    <p class="card-text">${arr[i].recipe_id}</p>
+                    <a btn='${arr[i].recipe_id}' href="#" class="btn btn-outline-success fw-bold">More</a>
                 </div>
             </div>
         </div>
@@ -45,7 +45,8 @@ function search(arr){
     retreive(result)
 }
 
-btnSearch.addEventListener('click',function(){
+btnSearch.addEventListener('click',function(e){
+    e.preventDefault();
     search(allData);
 })
 
