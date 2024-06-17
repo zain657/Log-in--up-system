@@ -1,0 +1,131 @@
+:root{
+    --mainColor:rgb(5, 99, 5);
+    --mainFont:"Playwrite AU NSW", cursive;
+    --logoFont:"Playwrite PT", cursive;
+}
+
+main{
+    font-family: var(--mainFont);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../image/Designer.jpeg) center center/contain;
+}
+.p-1{
+    opacity: .88;
+    background-color: black;
+}
+.p-2{
+    opacity: .88;
+    background-color: var(--mainColor);
+}
+.form-control:focus {
+    border-color:  var(--mainColor);
+    box-shadow: 0 0 0 .2rem  rgba(87, 248, 87, 0.267);
+}
+.p-2 .pra{
+    margin-top: 30%;
+}
+.s-a:hover{
+    color: black !important;
+}
+.s-a1:hover{
+    color: var(--mainColor) !important;
+}
+
+.p-1 label{
+    font-weight: 700;
+}
+.title,.za{
+    display: none;
+}
+.s{
+    border-radius: 15px;
+    box-shadow: 10px 10px 18px rgba(0, 0, 0, 0.308), -6px -6px 18px var(--mainColor);
+}
+
+
+@media (max-width:760px) {
+    .p-2{
+        display: none;
+    }
+    .p-1{
+        opacity: .95;
+        width: 100% !important;
+        background: linear-gradient(to right, black,  var(--mainColor));
+    }
+    main{
+        background-size: cover;
+    }
+    .title,.za{
+        display: block;
+    }
+}
+
+.p-1 input{
+    color: white;
+    border-color: var(--mainColor);
+    background-color: transparent;
+}
+.p-1 input::placeholder{
+    color: grey !important;
+}
+.bb .btn-outline-success{
+    border-color: var(--mainColor);
+    color: var(--mainColor);
+}
+.bb .btn-outline-success:hover{
+    background-color: var(--mainColor) !important;
+    color: white;
+}
+
+
+
+/* main section */
+
+.nav-title{
+    font-family: var(--logoFont);
+    color: var(--mainColor);
+}
+
+.nav-title:hover{
+    color: rgb(44, 187, 44);
+}
+
+nav{
+    box-shadow:0px 1px 18px var(--mainColor);
+    transition: all .5s;
+}
+
+nav:hover,.shadowA1:hover{
+    box-shadow:0px 2px 20px rgb(44, 187, 44);
+}
+
+.nav-link:hover{
+    color: var(--mainColor) !important;
+    font-weight: 800;
+}
+
+.main{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../image/Designer1.jpeg) center center/contain;
+    width: 100%;
+}
+
+.main .row img{
+    height: 150px;
+    object-fit: cover;
+}
+.card{
+    height: 350px;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--mainColor) !important;
+    font-weight: 800;
+}
+
+.shadowA1{
+    box-shadow:  3px 3px 15px var(--mainColor);
+    transition: all .3s;
+}
+
+.modal img{
+    width: 100%;
+}

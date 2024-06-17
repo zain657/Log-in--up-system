@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign-up</title>
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+NSW:wght@100..400&display=swap" rel="stylesheet">
+
+
+
+</head>
+<body>
+  <main class="w-100 vh-100 d-flex justify-content-center align-items-center">
+    <div class="container s">
+      <div class="row">
+        <div class="p-1 border rounded-start-4 col-6 p-5 text-white">
+          <h1 class="text-center title">Sign Up</h1>
+          <form id="form" action="">
+            <div class="mb-3">
+              <label for="fname" class="form-label">First name:</label>
+              <input type="text" class="form-control " id="fname" placeholder="Zain">
+            </div>
+            <div class="mb-3">
+              <label for="lname" class="form-label">Last name:</label>
+              <input type="text" class="form-control" id="lname" placeholder="Hassouneh">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address:</label>
+              <input type="email" class="form-control" id="email" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+              <label for="pass1" class="form-label">password:</label>
+              <input type="password" class="form-control" id="pass1" placeholder="******">
+            </div>
+            <div class="mb-3">
+              <label for="pass2" class="form-label">password confirmation:</label>
+              <input type="password" class="form-control" id="pass2" placeholder="******">
+            </div>
+            <div class="bb mb-3">
+              <button class="btn btn-outline-success w-100 mt-3" id="btn" type="submit">Sign Up</button>
+            </div>
+          </form>
+          <p class="pra za fs-6 text-center mt-5">You have an account? <a class="text-decoration-none text-white s-a1" href="index.html">Sign in</a></p>
+        </div>
+        <div class="p-2 col-6 border rounded-4 text-white text-center p-5">
+          <h1>SIGN UP</h1>
+          <p id="eror" class="mt-5 fs-4 text-danger"></p>
+          <p class="pra fs-4">You have an account? <a class="text-decoration-none text-white s-a" href="index.html">Sign in</a></p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.js"></script>
+  <script src="js/main-up.js"></script>
+</body>
+</html>
