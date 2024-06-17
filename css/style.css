@@ -131,5 +131,6 @@ nav:hover,.shadowA1:hover{
     width: 100%;
 }
 .log-out{
+    z-index: 999;
     top:20%;
 }
