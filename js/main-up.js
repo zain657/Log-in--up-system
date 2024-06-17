@@ -123,5 +123,7 @@ form.addEventListener('submit',function(e){
     emailVer(email.value);
     if(vEmail&&vName&&vPass&&vEmail1){
         addUser();
+        eror.classList.replace('text-danger','text-success');
+        eror.innerText='success';
     }
 })

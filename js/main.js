@@ -5,13 +5,16 @@ var modalTitle1 = document.getElementById('modal-title1');
 var modal = document.getElementById('modal');
 var modalimg = document.getElementById('modal-img');
 var urlInfo = document.getElementById('urlInfo');
+var logOut = document.getElementById('logOut');
 var navLink = document.querySelectorAll('.nav-link');
 var close1 = document.querySelectorAll('.close');
 var allData=[];
 var Xval;
 
 
-
+logOut.addEventListener('click',function(){
+    window.location.replace("index.html");
+})
 
 function retreive(arr) {
     var str = ``;
