@@ -14,7 +14,13 @@ var vName=false;
 var vPass=false;
 var emailIndex=0;
 
-var allUser=[];
+
+if(localStorage.getItem('userData')!==null){
+    var allUser=JSON.parse(localStorage.getItem('userData'));
+}
+else{
+    var allUser=[];
+}
 
 function validateName(firstName, lastName) {
     const namePattern = /^[a-zA-Z\s-]+$/;
@@ -47,8 +53,7 @@ function validateEmail(email) {
 }
 
 function emailVer(email){
-    allUser = JSON.parse(localStorage.getItem('userData'));
-    if(allUser){
+    if(allUser.length!==0){
         for(let i=0;i<allUser.length;i++){
             if(email==allUser[i].email){
                 vEmail1=false;
@@ -60,6 +65,9 @@ function emailVer(email){
                 vEmail1=true;
             }
         }
+    }
+    else{
+        vEmail1=true;
     }
 }
 
@@ -92,7 +100,6 @@ function clear(){
 
 
 
-
 function addUser(){
     var userObj={
         fname:fname.value,
@@ -105,7 +112,6 @@ function addUser(){
     localStorage.setItem('userData',datastr);
     console.log(allUser);
     clear();
-
 }
 
 
