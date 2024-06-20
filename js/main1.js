@@ -13,6 +13,8 @@ function passForEmail(pass,email){
         if(allUser1[i].email==email){
             if(allUser1[i].pass==pass){
                 vpassexisit=true;
+                allUser1[i].done=true;
+                localStorage.setItem('userData', JSON.stringify(allUser1));
             }
         }
     }

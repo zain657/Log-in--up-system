@@ -6,13 +6,20 @@ var modal = document.getElementById('modal');
 var modalimg = document.getElementById('modal-img');
 var urlInfo = document.getElementById('urlInfo');
 var logOut = document.getElementById('logOut');
+var wellcome1 = document.getElementById('wellcome');
 var navLink = document.querySelectorAll('.nav-link');
 var close1 = document.querySelectorAll('.close');
 var allData=[];
 var Xval;
+var user=JSON.parse(localStorage.getItem('userData'));
+console.log(user);
+var indexw=0;
 
-
+wellcome()
 logOut.addEventListener('click',function(){
+    user[indexw].done=false;
+    localStorage.setItem('userData',JSON.stringify(user));
+    console.log(indexw);
     window.location.replace("index.html");
 })
 
@@ -80,6 +87,15 @@ function closeModal(){
 }
 
 
+function wellcome(){
+    for(let i=0;i<user.length;i++){
+        if(user[i].done==true){
+            indexw=i;
+            break;
+        }
+    }
+    wellcome1.innerHTML=`<span class="text-white fw-bold">Wellcome</span> ${user[indexw].fname} ${user[indexw].lname}`;
+}
 
 function findOutWhichTagWasPressed(nodeList){
     for(let i=0;i<nodeList.length;i++){
