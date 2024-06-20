@@ -7,6 +7,7 @@ var modalimg = document.getElementById('modal-img');
 var urlInfo = document.getElementById('urlInfo');
 var logOut = document.getElementById('logOut');
 var wellcome1 = document.getElementById('wellcome');
+var time = document.getElementById('time');
 var navLink = document.querySelectorAll('.nav-link');
 var close1 = document.querySelectorAll('.close');
 var allData=[];
@@ -15,7 +16,21 @@ var user=JSON.parse(localStorage.getItem('userData'));
 console.log(user);
 var indexw=0;
 
-wellcome()
+wellcome();
+calTime();
+
+
+function calTime(){
+    let now = new Date();
+    let hours = now.getHours().toString().padStart(2, '0');
+    let minutes = now.getMinutes().toString().padStart(2, '0');
+    let seconds = now.getSeconds().toString().padStart(2, '0');
+    let currentTime = `${hours}:${minutes}:${seconds}`;
+    time.innerText=`TIME: ${currentTime}`;
+}
+
+setInterval(calTime, 1000);
+
 logOut.addEventListener('click',function(){
     user[indexw].done=false;
     localStorage.setItem('userData',JSON.stringify(user));

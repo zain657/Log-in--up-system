@@ -42,22 +42,6 @@ main{
 }
 
 
-@media (max-width:760px) {
-    .p-2{
-        display: none;
-    }
-    .p-1{
-        opacity: .95;
-        width: 100% !important;
-        background: linear-gradient(to right, black,  var(--mainColor));
-    }
-    main{
-        background-size: cover;
-    }
-    .title,.za{
-        display: block;
-    }
-}
 
 .p-1 input{
     color: white;
@@ -133,4 +117,33 @@ nav:hover,.shadowA1:hover{
 .log-out{
     z-index: 999;
     top:20%;
+}
+#time{
+    position: fixed;
+    width: 130px;
+    background-color: var(--mainColor);
+}
+.navbar-toggler{
+    background-color: var(--mainColor) !important;
+}
+
+@media (max-width:760px) {
+    .p-2{
+        display: none;
+    }
+    .p-1{
+        opacity: .95;
+        width: 100% !important;
+        background: linear-gradient(to right, black,  var(--mainColor));
+    }
+    main{
+        background-size: cover;
+    }
+    .title,.za{
+        display: block;
+    }
+    #time{
+        position: relative;
+        margin: auto;
+    }
 }
