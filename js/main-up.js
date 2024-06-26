@@ -82,7 +82,8 @@ function validatePass(pass1,pass2) {
         vPass=false;
     }
     else if (pass1!==pass2){
-        eror.innerText+='password does not match. &'
+        eror.innerText+='password does not match. &';
+        vPass=false;
     }
     else{
         vPass=true;
